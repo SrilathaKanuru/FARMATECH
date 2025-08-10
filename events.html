@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KSN Farm Connect — Events</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo">KSN Farm Connect</div>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="market.html">Market</a>
+    <a href="labor.html">Labor</a>
+    <a href="events.html">Events</a>
+    <a href="locations.html">Locations</a>
+  </nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<main style="padding:1.5rem;">
+  <h2>Upcoming Events</h2>
+  <p>Click an event for more details.</p>
+
+  <ul style="list-style:none;padding:0;margin-top:1rem;display:grid;gap:1rem;">
+    <li style="background:#fff;padding:1rem;border-radius:8px;">
+      <strong>Farm Open Day</strong> — 2025-09-10
+      <p style="margin:.5rem 0;color:#666">Guided tour and fresh produce tasting.</p>
+      <button onclick="alert('Event: Farm Open Day\nDate: 2025-09-10\nLocation: KSN Farm')">Details</button>
+    </li>
+
+    <li style="background:#fff;padding:1rem;border-radius:8px;">
+      <strong>Harvest Workshop</strong> — 2025-10-02
+      <p style="margin:.5rem 0;color:#666">Hands-on harvesting techniques and Q&A.</p>
+      <button onclick="alert('Event: Harvest Workshop\nDate: 2025-10-02\nRegister by: 2025-09-25')">Details</button>
+    </li>
+
+    <li style="background:#fff;padding:1rem;border-radius:8px;">
+      <strong>Market Day</strong> — 2025-11-15
+      <p style="margin:.5rem 0;color:#666">Special market with guest buyers and prizes.</p>
+      <button onclick="alert('Event: Market Day\nDate: 2025-11-15\nStalls open from 8:00 AM')">Details</button>
+    </li>
+  </ul>
+</main>
+
+<footer>
+  <p>© 2025 KSN Farm Connect</p>
+</footer>
+</body>
+</html>
