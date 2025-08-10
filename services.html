@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KSN Farm Connect — Services</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo">KSN Farm Connect</div>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="market.html">Market</a>
+    <a href="labor.html">Labor</a>
+    <a href="events.html">Events</a>
+    <a href="locations.html">Locations</a>
+  </nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<main>
+  <section style="padding:1.5rem;">
+    <h2>Services</h2>
+    <p>Entry details, farm tours, live cam, and visitor info.</p>
+
+    <div style="display:grid; gap:1rem; margin-top:1rem;">
+      <div style="background:#fff; padding:1rem; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.06);">
+        <h3>Entry at KSN Farm</h3>
+        <p>Photos & videos, visiting hours, booking info.</p>
+        <button onclick="alert('Booking page coming soon')">Book Visit</button>
+      </div>
+
+      <div style="background:#fff; padding:1rem; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.06);">
+        <h3>Live Cam Feed</h3>
+        <!-- placeholder YouTube embed -->
+        <div style="position:relative;padding-top:56.25%;">
+          <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+            style="position:absolute;left:0;top:0;width:100%;height:100%;border:0" 
+            allowfullscreen title="Live farm feed"></iframe>
+        </div>
+      </div>
+
+      <div style="background:#fff; padding:1rem; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.06);">
+        <h3>Contact & Location</h3>
+        <p><strong>Address:</strong> Sivaram Puram — KSN Farm</p>
+        <p><strong>Phone:</strong> +91 955-555-450</p>
+        <a href="locations.html">View on map</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 KSN Farm Connect</p>
+</footer>
+</body>
+</html>
