@@ -1,0 +1,54 @@
+{
+  "home": {
+    "en": "Home",
+    "te": "హోమ్"
+  },
+  "services": {
+    "en": "Services",
+    "te": "సేవలు"
+  },
+  "market": {
+    "en": "Market",
+    "te": "మార్కెట్"
+  },
+  "labor": {
+    "en": "Labor",
+    "te": "కూలీలు"
+  },
+  "events": {
+    "en": "Events",
+    "te": "ఈవెంట్స్"
+  },
+  "locations": {
+    "en": "Locations",
+    "te": "ప్రాంతాలు"
+  },
+  "weather": {
+    "en": "Weather Update",
+    "te": "వాతావరణ సమాచారం"
+  },
+  "welcome_msg": {
+    "en": "Welcome to KSN Farm Connect — your partner in modern agriculture.",
+    "te": "KSN ఫార్మ్ కనెక్ట్ కు స్వాగతం — మీ ఆధునిక వ్యవసాయ భాగస్వామి."
+  },
+  "services_intro": {
+    "en": "We provide expert farming services to boost your yield.",
+    "te": "మేము మీ దిగుబడిని పెంచడానికి నిపుణుల వ్యవసాయ సేవలను అందిస్తున్నాము."
+  },
+  "market_intro": {
+    "en": "Browse and shop for fresh farm produce.",
+    "te": "తాజా వ్యవసాయ ఉత్పత్తులను చూడండి మరియు కొనండి."
+  },
+  "labor_intro": {
+    "en": "Find skilled and unskilled labor for your farm.",
+    "te": "మీ వ్యవసాయానికి నైపుణ్యం ఉన్న మరియు నైపుణ్యం లేని కూలీలను కనుగొనండి."
+  },
+  "events_intro": {
+    "en": "Upcoming agricultural workshops and events.",
+    "te": "రాబోయే వ్యవసాయ శిక్షణలు మరియు ఈవెంట్స్."
+  },
+  "locations_intro": {
+    "en": "Explore KSN Farm branches and partner locations.",
+    "te": "KSN ఫార్మ్ శాఖలు మరియు భాగస్వామి ప్రదేశాలను అన్వేషించండి."
+  }
+}
