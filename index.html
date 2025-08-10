@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KSN Farm Connect</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KSN Farm Connect</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Header (shared on all pages) -->
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo">KSN Farm Connect</div>
+      <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+    </div>
 
-<header>
-    <div class="logo">KSN Farm Connect</div>
-    <nav id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="market.html">Market</a>
-        <a href="labor.html">Labor</a>
-        <a href="events.html">Events</a>
-        <a href="locations.html">Locations</a>
+    <nav id="navMenu" class="nav-menu">
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="services.html" data-i18n="services">Services</a>
+      <a href="market.html" data-i18n="market">Market</a>
+      <a href="labor.html" data-i18n="labor">Labor</a>
+      <a href="events.html" data-i18n="events">Events</a>
+      <a href="locations.html" data-i18n="locations">Locations</a>
     </nav>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-</header>
 
-<main>
-    <section class="welcome">
-        <h2>Welcome to KSN Farm!</h2>
-        <p>Your hard work deserves a fair price — we’re here to help!</p>
+    <div class="header-right">
+      <select id="langSelect" aria-label="Language selector">
+        <option value="en">English</option>
+        <option value="te">తెలుగు</option>
+      </select>
+
+      <div id="weather" class="weather">
+        <div class="weather-title" data-i18n="weather">Weather Update</div>
+        <div id="weatherInfo">Loading...</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1 data-i18n="welcome_title">Welcome to KSN Farm!</h1>
+        <p data-i18n="welcome_sub">
+          Your hard work deserves a fair price — we’re here to help.
+        </p>
+
+        <div class="quick-grid">
+          <a class="card" href="services.html" data-i18n="services">Services</a>
+          <a class="card" href="market.html" data-i18n="market">Farmer's Market</a>
+          <a class="card" href="labor.html" data-i18n="labor">Labor Services</a>
+          <a class="card" href="events.html" data-i18n="events">Upcoming Events</a>
+          <a class="card" href="locations.html" data-i18n="locations">Locations</a>
+          <a class="card" href="#" onclick="openCart()">Cart (<span id="cartCount">0</span>)</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- placeholder image -->
+        <img src="https://via.placeholder.com/520x320?text=KSN+Farm" alt="KSN Farm" />
+      </div>
     </section>
 
-    <section class="nav-grid">
-        <a href="services.html">Services</a>
-        <a href="market.html">Farmer’s Market</a>
-        <a href="labor.html">Labor Services</a>
-        <a href="events.html">Upcoming Events</a>
-        <a href="locations.html">Location</a>
+    <section class="about">
+      <h2 data-i18n="about_title">What we do</h2>
+      <ul>
+        <li data-i18n="about_1">Connect farmers directly to buyers</li>
+        <li data-i18n="about_2">Live farm updates & tours</li>
+        <li data-i18n="about_3">Labor service listings</li>
+        <li data-i18n="about_4">Events, workshops and market days</li>
+      </ul>
     </section>
-</main>
+  </main>
 
-<footer>
-    <p>© 2025 KSN Farm Connect</p>
-</footer>
-
+  <!-- Footer (shared on all pages) -->
+  <footer class="site-footer">
+    <div>© 2025 KSN Farm Connect</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a> ·
+      <a href="locations.html" data-i18n="locations">Locations</a>
+    </div>
+  </footer>
 </body>
 </html>
