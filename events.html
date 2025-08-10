@@ -1,53 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>KSN Farm Connect — Events</title>
-<link rel="stylesheet" href="style.css" />
-<script src="script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KSN Farm - Events</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-  <div class="logo">KSN Farm Connect</div>
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="market.html">Market</a>
-    <a href="labor.html">Labor</a>
-    <a href="events.html">Events</a>
-    <a href="locations.html">Locations</a>
-  </nav>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-</header>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo">KSN Farm Connect</div>
+      <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+    </div>
 
-<main style="padding:1.5rem;">
-  <h2>Upcoming Events</h2>
-  <p>Click an event for more details.</p>
+    <nav id="navMenu" class="nav-menu">
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="services.html" data-i18n="services">Services</a>
+      <a href="market.html" data-i18n="market">Market</a>
+      <a href="labor.html" data-i18n="labor">Labor</a>
+      <a href="events.html" data-i18n="events">Events</a>
+      <a href="locations.html" data-i18n="locations">Locations</a>
+    </nav>
 
-  <ul style="list-style:none;padding:0;margin-top:1rem;display:grid;gap:1rem;">
-    <li style="background:#fff;padding:1rem;border-radius:8px;">
-      <strong>Farm Open Day</strong> — 2025-09-10
-      <p style="margin:.5rem 0;color:#666">Guided tour and fresh produce tasting.</p>
-      <button onclick="alert('Event: Farm Open Day\nDate: 2025-09-10\nLocation: KSN Farm')">Details</button>
-    </li>
+    <div class="header-right">
+      <select id="langSelect" aria-label="Language selector">
+        <option value="en">English</option>
+        <option value="te">తెలుగు</option>
+      </select>
 
-    <li style="background:#fff;padding:1rem;border-radius:8px;">
-      <strong>Harvest Workshop</strong> — 2025-10-02
-      <p style="margin:.5rem 0;color:#666">Hands-on harvesting techniques and Q&A.</p>
-      <button onclick="alert('Event: Harvest Workshop\nDate: 2025-10-02\nRegister by: 2025-09-25')">Details</button>
-    </li>
+      <div id="weather" class="weather">
+        <div class="weather-title" data-i18n="weather">Weather Update</div>
+        <div id="weatherInfo">Loading...</div>
+      </div>
+    </div>
+  </header>
 
-    <li style="background:#fff;padding:1rem;border-radius:8px;">
-      <strong>Market Day</strong> — 2025-11-15
-      <p style="margin:.5rem 0;color:#666">Special market with guest buyers and prizes.</p>
-      <button onclick="alert('Event: Market Day\nDate: 2025-11-15\nStalls open from 8:00 AM')">Details</button>
-    </li>
-  </ul>
-</main>
+  <!-- Main content -->
+  <main class="container">
+    <h1 data-i18n="events">Upcoming Events</h1>
+    <p data-i18n="events_intro">
+      Join agricultural events, workshops, and exhibitions.
+    </p>
 
-<footer>
-  <p>© 2025 KSN Farm Connect</p>
-</footer>
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="event1_title">Organic Farming Workshop</h3>
+        <p data-i18n="event1_date">Date: 15th Aug 2025</p>
+        <p data-i18n="event1_loc">Location: KSN Training Center</p>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="event2_title">Agro Machinery Expo</h3>
+        <p data-i18n="event2_date">Date: 2nd Sep 2025</p>
+        <p data-i18n="event2_loc">Location: City Exhibition Hall</p>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="event3_title">Seed & Fertilizer Fair</h3>
+        <p data-i18n="event3_date">Date: 20th Sep 2025</p>
+        <p data-i18n="event3_loc">Location: Main Market Ground</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>© 2025 KSN Farm Connect</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a> ·
+      <a href="locations.html" data-i18n="locations">Locations</a>
+    </div>
+  </footer>
 </body>
 </html>
