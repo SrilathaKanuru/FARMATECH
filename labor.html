@@ -1,95 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>KSN Farm Connect — Labor Services</title>
-<link rel="stylesheet" href="style.css" />
-<script src="script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KSN Farm - Labor Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-  <div class="logo">KSN Farm Connect</div>
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="market.html">Market</a>
-    <a href="labor.html">Labor</a>
-    <a href="events.html">Events</a>
-    <a href="locations.html">Locations</a>
-  </nav>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-</header>
-
-<main style="padding:1.5rem;">
-  <h2>Labor Services</h2>
-  <p>Find part-time or full-time help for farm work.</p>
-
-  <div style="display:flex; gap:1rem; margin-top:1rem;">
-    <button onclick="filterLabor('daily')">Daily</button>
-    <button onclick="filterLabor('weekly')">Weekly</button>
-    <button onclick="filterLabor('monthly')">Monthly</button>
-  </div>
-
-  <div id="laborList" style="margin-top:1rem; display:grid; gap:1rem;">
-    <div class="labor-card" data-type="fulltime" style="background:#fff;padding:1rem;border-radius:8px;">
-      <h3>Rameesh</h3>
-      <p>Full Time • Experienced farmhand</p>
-      <p>Rate: ₹400 / day</p>
-      <p>Contact: +91 98765 43210</p>
-      <div style="margin-top:.6rem;">
-        <button onclick="contactNumber('+919876543210')">Call</button>
-        <button onclick="alert('Request sent to Rameesh')">Request</button>
-      </div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo">KSN Farm Connect</div>
+      <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
     </div>
 
-    <div class="labor-card" data-type="parttime" style="background:#fff;padding:1rem;border-radius:8px;">
-      <h3>Kumar</h3>
-      <p>Part Time • Planting & harvesting</p>
-      <p>Rate: ₹150 / day</p>
-      <p>Contact: +91 95555 54545</p>
-      <div style="margin-top:.6rem;">
-        <button onclick="contactNumber('+919555554545')">Call</button>
-        <button onclick="alert('Request sent to Kumar')">Request</button>
+    <nav id="navMenu" class="nav-menu">
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="services.html" data-i18n="services">Services</a>
+      <a href="market.html" data-i18n="market">Market</a>
+      <a href="labor.html" data-i18n="labor">Labor</a>
+      <a href="events.html" data-i18n="events">Events</a>
+      <a href="locations.html" data-i18n="locations">Locations</a>
+    </nav>
+
+    <div class="header-right">
+      <select id="langSelect" aria-label="Language selector">
+        <option value="en">English</option>
+        <option value="te">తెలుగు</option>
+      </select>
+
+      <div id="weather" class="weather">
+        <div class="weather-title" data-i18n="weather">Weather Update</div>
+        <div id="weatherInfo">Loading...</div>
       </div>
     </div>
+  </header>
 
-    <div class="labor-card" data-type="monthly" style="background:#fff;padding:1rem;border-radius:8px;">
-      <h3>Arjun</h3>
-      <p>Full Time • Machinery operator</p>
-      <p>Rate: ₹10,000 / month</p>
-      <p>Contact: +91 94444 33221</p>
-      <div style="margin-top:.6rem;">
-        <button onclick="contactNumber('+919444433221')">Call</button>
-        <button onclick="alert('Request sent to Arjun')">Request</button>
+  <!-- Main content -->
+  <main class="container">
+    <h1 data-i18n="labor">Labor Services</h1>
+    <p data-i18n="labor_intro">
+      Find skilled labor for farming tasks. Contact details are listed with each worker.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3 data-i18n="labor1_name">Ramesh Kumar</h3>
+        <p data-i18n="labor1_skill">Ploughing & Seeding</p>
+        <p>📞 9876543210</p>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="labor2_name">Anitha Devi</h3>
+        <p data-i18n="labor2_skill">Harvesting</p>
+        <p>📞 9876543211</p>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="labor3_name">Suresh Yadav</h3>
+        <p data-i18n="labor3_skill">Irrigation Setup</p>
+        <p>📞 9876543212</p>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
-<footer>
-  <p>© 2025 KSN Farm Connect</p>
-</footer>
-
-<script>
-function contactNumber(number) {
-  // for mobile devices will try to call
-  window.location.href = `tel:${number}`;
-}
-
-function filterLabor(type) {
-  const cards = document.querySelectorAll('.labor-card');
-  cards.forEach(c => {
-    const t = c.dataset.type || '';
-    if (type === 'daily') {
-      c.style.display = t.includes('parttime') || t.includes('fulltime') ? 'block' : 'none';
-    } else if (type === 'weekly') {
-      c.style.display = t.includes('monthly') ? 'none' : 'block';
-    } else if (type === 'monthly') {
-      c.style.display = t.includes('monthly') ? 'block' : 'none';
-    }
-  });
-}
-</script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>© 2025 KSN Farm Connect</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a> ·
+      <a href="locations.html" data-i18n="locations">Locations</a>
+    </div>
+  </footer>
 </body>
 </html>
