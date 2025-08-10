@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KSN Farm Connect — Farmer's Market</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="logo">KSN Farm Connect</div>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="market.html">Market</a>
+    <a href="labor.html">Labor</a>
+    <a href="events.html">Events</a>
+    <a href="locations.html">Locations</a>
+  </nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<main style="padding:1.5rem;">
+  <h2>Farmer's Market</h2>
+
+  <div style="display:flex; gap:.5rem; margin:1rem 0;">
+    <input id="search" onkeyup="filterProducts()" placeholder="Search products..." style="flex:1;padding:.6rem;border-radius:6px;border:1px solid #ddd;" />
+    <button onclick="showCart()" style="padding:.6rem 1rem;border-radius:6px;background:#4CAF50;color:#fff;border:none;">Cart</button>
+  </div>
+
+  <div id="productGrid" class="product-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem;">
+    <!-- product 1 -->
+    <div class="product-card" style="background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);">
+      <img src="https://via.placeholder.com/300x180?text=Tomatoes" alt="Tomatoes" style="width:100%;border-radius:6px;"/>
+      <h3>Tomatoes</h3>
+      <p>₹40 / kg</p>
+      <p style="font-size:.9rem;color:#666">Fresh organic — Sivaram Puram</p>
+      <div style="display:flex; gap:.5rem; margin-top:.6rem;">
+        <button onclick="addToCart('Tomatoes',40)" style="flex:1;padding:.5rem;border-radius:6px;border:1px solid #4CAF50;background:#fff;color:#4CAF50;">Add</button>
+        <button onclick="viewProduct('Tomatoes','Fresh organic tomatoes from Sivaram Puram',40)" style="flex:1;padding:.5rem;border-radius:6px;border:none;background:#4CAF50;color:#fff;">View</button>
+      </div>
+    </div>
+
+    <!-- product 2 -->
+    <div class="product-card" style="background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);">
+      <img src="https://via.placeholder.com/300x180?text=Bell+Peppers" alt="Bell Peppers" style="width:100%;border-radius:6px;"/>
+      <h3>Bell Peppers</h3>
+      <p>₹120 / kg</p>
+      <p style="font-size:.9rem;color:#666">Grade A — Gunam</p>
+      <div style="display:flex; gap:.5rem; margin-top:.6rem;">
+        <button onclick="addToCart('Bell Peppers',120)" style="flex:1;padding:.5rem;border-radius:6px;border:1px solid #4CAF50;background:#fff;color:#4CAF50;">Add</button>
+        <button onclick="viewProduct('Bell Peppers','Crisp bell peppers, Grade A',120)" style="flex:1;padding:.5rem;border-radius:6px;border:none;background:#4CAF50;color:#fff;">View</button>
+      </div>
+    </div>
+
+    <!-- product 3 -->
+    <div class="product-card" style="background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);">
+      <img src="https://via.placeholder.com/300x180?text=Green+Beans" alt="Green Beans" style="width:100%;border-radius:6px;"/>
+      <h3>Green Beans</h3>
+      <p>₹60 / kg</p>
+      <p style="font-size:.9rem;color:#666">80 kg stock — Anti, Gunam</p>
+      <div style="display:flex; gap:.5rem; margin-top:.6rem;">
+        <button onclick="addToCart('Green Beans',60)" style="flex:1;padding:.5rem;border-radius:6px;border:1px solid #4CAF50;background:#fff;color:#4CAF50;">Add</button>
+        <button onclick="viewProduct('Green Beans','Fresh harvest of green beans',60)" style="flex:1;padding:.5rem;border-radius:6px;border:none;background:#4CAF50;color:#fff;">View</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 KSN Farm Connect</p>
+</footer>
+</body>
+</html>
