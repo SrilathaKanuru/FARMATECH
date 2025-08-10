@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.welcome {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.nav-grid a {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav-grid a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+footer {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-btn {
+        display: block;
+    }
+}
